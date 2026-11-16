@@ -1,30 +1,23 @@
-Projekts sastāv no 4 failiem
-Programma ir parfīmu kolekcionāram. Tas glabā parfīmus un valkāšanas žurnālu - kad un kādos pasākumos katru parfīmu var izmantot.
+# Mana Parfīmu Kolekcija
+![Mana Parfīmu Kolekcija logo](perfumebgg.png)
 
-Projekta mērķis:
-Parfīmu kolekcionāram ir grūti izsekot, kuri parfīmi viņam ir, cik bieži tos valkā un kādos pasākumos. 
-Šī programma ļauj:
-•	pierakstit brendus - nosaukums, valsts, dibināšanas gads;
-•	pievienot savus parfīmus un brendus;
-•	fiksēt katru valkāšanas reizi (datums, pasākums);
-•	vēlāk apskatīt visu valkāšanas žurnālu.
+**Python + SQLite** datubāzes projekts — parfīmu kolekcionāra palīgs. Programma glabā parfīmus un to ražotājus, fiksē katru valkāšanas reizi žurnālā, ļauj vērtēt parfīmus un sasaistīt tos ar smaržu notām un sezonām. Ar datiem var strādāt divos veidos — **grafiskajā logā** (app.py) vai **izvēlnē terminālī** (terminal.py).
 
-Faili:
-main.py - izveido datubāzi parfumi.db, visas tabulas un sākuma datus.
-funkcijas.py - datu funkcijas (pievienošana un nolasīšana)
-app.py - grafiskais interfeiss (tkinter logs)
-terminal.py - teksta izvēlne terminālī
+---
 
-Datubāzes struktūra:
-Datubāzē ir 8 tabulas: 
-Brands - ražotāji(nosaukums, valsts, dibināšanas gads)
-Perfumes - parfīmi(nosaukums, koncentrācija, apjoms, izlaiduma gads, cena)
-FragranceNotes – aromātu notes
-PerfumeNotes – parfīmu un notu sasaiste
-WearLog - valkšānas
-Ratings – parfīmu vērtējumi
-Seasons - sezonas
-PerfumeSeasons – parfīmu un sezonu sasaiste
+## Apraksts
+Galvenās programmas iespējas:
+- datubāze `parfumi.db` ar **8 savstarpēji saistītām tabulām** un ārējām atslēgām;
+- grafiskais logs ar **8 cilnēm** - katrai tabulai sava;
+- **pievienošana** un **dzēšana**: dzēšot parfīmu, programma izdzēš arī tā žurnāla ierakstus, vērtējumus un sasaistes;
+- **meklēšana visās 8 tabulās vienlaikus*;
+- `JOIN` vaicājumi tabulās rāda nosaukumus, nevis tikai ID.
+
+Izmantotās tehnoloģijas: [Python](https://www.python.org/) ar moduļiem `tkinter` un `sqlite3` — *papildu bibliotēkas nav vajadzīgas*.
+
+## Datubāzes shēma (Schema)
+<img width="869" height="805" alt="tablesketch (2)" src="https://github.com/user-attachments/assets/fe790f06-c35c-47a9-84f0-a2ef79fec2a4" />
+
 
 
 
